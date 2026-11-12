@@ -1,0 +1,19 @@
+{
+  "books": [
+    { "id": "B01", "title": "The Hobbit", "category": "Fiction" },
+    { "id": "B02", "title": "The Little Prince", "category": "Fiction" },
+    { "id": "B03", "title": "Functional Programming in C#", "category": "Computing" },
+    { "id": "B04", "title": "Algorithms", "category": "Computing" },
+    { "id": "B05", "title": "A Brief History of Time", "category": "Science" }
+  ],
+  "members": [
+    { "id": "M01", "name": "Dana Karim", "kind": "student", "balance": 0 },
+    { "id": "M02", "name": "Samat Lee", "kind": "staff", "balance": 0 },
+    { "id": "M03", "name": "Amina Nur", "kind": "student", "balance": 2000 }
+  ],
+  "loans": [
+    { "bookId": "B01", "memberId": "M01", "opened": "2026-10-26", "due": "2026-11-09", "renewals": 0 },
+    { "bookId": "B03", "memberId": "M02", "opened": "2026-10-17", "due": "2026-11-14", "renewals": 0 }
+  ],
+  "holds": []
+}

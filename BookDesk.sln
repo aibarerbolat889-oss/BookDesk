@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9219005E-07F7-4611-A5EA-7DBAE77D04F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookDesk", "src\BookDesk\BookDesk.csproj", "{B04E6D35-4F08-45A0-A268-0B4905C9EC72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{33A799B1-6927-485D-A18C-8D86D313D542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookDesk.Tests", "tests\BookDesk.Tests\BookDesk.Tests.csproj", "{442EA7EE-AD36-48A4-A1C4-15125E700ADF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B04E6D35-4F08-45A0-A268-0B4905C9EC72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B04E6D35-4F08-45A0-A268-0B4905C9EC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B04E6D35-4F08-45A0-A268-0B4905C9EC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B04E6D35-4F08-45A0-A268-0B4905C9EC72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{442EA7EE-AD36-48A4-A1C4-15125E700ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{442EA7EE-AD36-48A4-A1C4-15125E700ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{442EA7EE-AD36-48A4-A1C4-15125E700ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{442EA7EE-AD36-48A4-A1C4-15125E700ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B04E6D35-4F08-45A0-A268-0B4905C9EC72} = {9219005E-07F7-4611-A5EA-7DBAE77D04F8}
+		{442EA7EE-AD36-48A4-A1C4-15125E700ADF} = {33A799B1-6927-485D-A18C-8D86D313D542}
+	EndGlobalSection
+EndGlobal
