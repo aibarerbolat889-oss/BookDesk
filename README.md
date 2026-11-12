@@ -20,8 +20,8 @@ Run from the project root in PowerShell.
 
 ```powershell
 dotnet --version
-dotnet restore BookDesk.sln
-dotnet build BookDesk.sln -c Release --no-restore
+dotnet restore BookDesk.sln -m:1
+dotnet build BookDesk.sln -c Release --no-restore -m:1 --disable-build-servers
 dotnet run --project tests/BookDesk.Tests -c Release --no-build
 dotnet run --project src/BookDesk -c Release --no-build -- --help
 ```
@@ -32,7 +32,7 @@ The prebuilt native DLL is in `runtimes/win-x64/native/bookdesk_fee.dll` and is 
 native\build-win-x64.cmd
 ```
 
-The script compiles `native/bookdesk_fee.c` as C using MSVC and statically links the C runtime. The DLL exports `bookdesk_calculate_fee`; `NativeFee.Calculate` calls the Cdecl export with signed 32-bit integers and an out parameter. The C function uses a 64-bit intermediate and caps the result at 3,000 KZT. A missing, invalid or incompatible DLL fails the return operation before the JSON changes.
+The script compiles `native/bookdesk_fee.c` as C using MSVC and statically links the C runtime. `NativeFee.Calculate` calls the DLL's `bookdesk_calculate_fee` Cdecl export with signed 32-bit integers and an out parameter. The C function uses a 64-bit intermediate and caps the result at 3,000 KZT. A missing, invalid or incompatible DLL fails the return operation before the JSON changes.
 
 ## Reproducible demo
 
@@ -92,7 +92,7 @@ This version supports one physical copy per book ID, local single-file storage a
 
 Branch `main`. The Git tag `final-exam` identifies the release commit. From a clone, run `git rev-parse final-exam^{commit}` in Git Bash or `git rev-parse 'final-exam^{commit}'` in PowerShell. The release metadata accompanying the archive records the full commit ID. The hosted URL is pending.
 
-To publish the exact snapshot, clone the provided Git bundle with `git clone -b main BookDesk.git.bundle BookDesk`. Create an empty hosted repository for the team, set the clone's origin to its URL with `git remote set-url origin <repository-url>`, then run `git push -u origin main` and `git push origin final-exam`. If the repository is private, grant the instructor access. Add the hosted URL to the report and release metadata.
+To publish the project, clone the provided Git bundle with `git clone -b main BookDesk.git.bundle BookDesk`. Create an empty hosted repository for the team and set the clone's origin to its URL with `git remote set-url origin <repository-url>`. Record the URL in this README and the group report. If the team commits changes before submission, tag the new local commit as `final-exam` before pushing the tag and regenerate the code in each ZIP from that commit. Run `git push -u origin main` and `git push origin final-exam`. Update the release metadata and group report with the resulting commit ID. If the repository is private, grant the instructor access.
 
 ## References
 
