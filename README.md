@@ -88,11 +88,13 @@ The JSON has four required arrays `books`, `members`, `loans` and `holds`. Hold 
 
 This version supports one physical copy per book ID, local single-file storage and a Windows x64 native binary. It keeps active loans and current balances without maintaining a loan or payment history. The queue has no expiry and there is no automatic fine collection. Dates range from 2000 to 2100. The application assumes the JSON is managed through the CLI during concurrent use.
 
+
 ## Version
 
-Branch `main`. The Git tag `final-exam` identifies the release commit. From a clone, run `git rev-parse final-exam^{commit}` in Git Bash or `git rev-parse 'final-exam^{commit}'` in PowerShell. The release metadata accompanying the archive records the full commit ID. The hosted URL is pending.
-
-To publish the project, clone the provided Git bundle with `git clone -b main BookDesk.git.bundle BookDesk`. Create an empty hosted repository for the team and set the clone's origin to its URL with `git remote set-url origin <repository-url>`. Record the URL in this README and the group report. If the team commits changes before submission, tag the new local commit as `final-exam` before pushing the tag and regenerate the code in each ZIP from that commit. Run `git push -u origin main` and `git push origin final-exam`. Update the release metadata and group report with the resulting commit ID. If the repository is private, grant the instructor access.
+- Repository: https://github.com/aibarerbolat889-oss/BookDesk
+- Branch: `main`
+- Release tag: `final-exam`
+- Submitted code commit: `6e413b72d554bf7059ca906fed853450a3a7bbd5`
 
 ## References
 
